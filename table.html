@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Weather App</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="table.html">Tables</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h3>5-Day Weather Forecast</h3>
+            <label for="filter">Filter Forecast:</label>
+            <select id="filter">
+                <option value="none">None</option>
+                <option value="highest-temp">Highest Temperature</option>
+                <option value="ascending">Ascending Temperature</option>
+                <option value="descending">Descending Temperature</option>
+                <option value="rainy">Days with Rain</option>
+            </select>
+            
+            <section id="forecast-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature (°C)</th>
+                            <th>Humidity (%)</th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forecast-data">
+                        <!-- Data will be inserted here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <aside class="chatbot">
+                <h3>Chatbot</h3>
+                <form id="apiPromptForm">
+                    <label for="apiPrompt">API Prompt:</label>
+                    <input type="text" id="apiPrompt" name="apiPrompt" required>
+    
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="response"></div>
+            </aside>
+        </main>
+
+
+        
+    </div>
+
+    <script src="weather.js"></script>
+    <script src="table.js"></script>
+</body>
+</html>
